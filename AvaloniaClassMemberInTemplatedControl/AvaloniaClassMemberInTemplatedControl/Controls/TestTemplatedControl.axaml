@@ -1,0 +1,18 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:AvaloniaClassMemberInTemplatedControl.Controls">
+  <Design.PreviewWith>
+    <controls:TestTemplatedControl />
+  </Design.PreviewWith>
+
+  <Style Selector="controls|TestTemplatedControl">
+    <!-- Set Defaults -->
+    <Setter Property="Template">
+      <ControlTemplate>
+		  <StackPanel Orientation="Vertical">
+			  <NumericUpDown Value="{TemplateBinding Record.Value1}" Width="200" Background="Azure"/>
+		  </StackPanel>
+	  </ControlTemplate>
+    </Setter>
+  </Style>
+</Styles>
