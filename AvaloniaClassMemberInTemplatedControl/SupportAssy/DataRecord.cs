@@ -1,7 +1,10 @@
-﻿namespace SupportAssy
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace SupportAssy
 {
-    public class DataRecord
+    public partial class DataRecord : ObservableObject
     {
-        public float Value1 { get; set; }
+        [ObservableProperty]
+        private float value1 = 1.234f;
     }
 }

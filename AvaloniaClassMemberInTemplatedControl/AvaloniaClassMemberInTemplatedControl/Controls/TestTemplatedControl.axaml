@@ -10,7 +10,7 @@
     <Setter Property="Template">
       <ControlTemplate>
 		  <StackPanel Orientation="Vertical">
-			  <NumericUpDown Value="{TemplateBinding Record.Value1}" Width="200" Background="Azure"/>
+			  <NumericUpDown Value="{Binding Record.Value1, RelativeSource={RelativeSource TemplatedParent}}"  Width="200" Background="Azure"/>
 		  </StackPanel>
 	  </ControlTemplate>
     </Setter>

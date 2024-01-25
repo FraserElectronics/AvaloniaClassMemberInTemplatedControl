@@ -2,20 +2,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="clr-namespace:AvaloniaClassMemberInTemplatedControl.ViewModels"
-			 xmlns:controls="clr-namespace:AvaloniaClassMemberInTemplatedControl.Controls"
+             xmlns:vm="clr-namespace:FingerprintManager.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="AvaloniaClassMemberInTemplatedControl.Views.MainView"
-             x:DataType="vm:MainViewModel">
+             x:Class="FingerprintManager.Views.MainView"
+             x:DataType="vm:IMainViewModel">
 	<Design.DataContext>
 		<!-- This only sets the DataContext for the previewer in an IDE,
          to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
 		<vm:MainViewModel />
 	</Design.DataContext>
-
 	<StackPanel Orientation="Vertical">
-		<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-		<controls:TestTemplatedControl Record="{Binding MyDataRecord, Mode=TwoWay}"/>
-		<TextBlock Text="{Binding MyDataRecord.Value1}" FontSize="20" HorizontalAlignment="Center" Margin="0,20,0,0"/>
+		<Button Command="{Binding FindFingerprintModule}">
+			<TextBlock Text="Find Fingerprint Module"/>
+		</Button>
 	</StackPanel>
 </UserControl>
